@@ -21,7 +21,7 @@ jobs:
           - npm-cache-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
 
     # Installing pip requirements
-    - run: ls home/circleci/alejandronunez
+    - run: ls home/circleci
     - run: yarn install
 
     # Save cache
