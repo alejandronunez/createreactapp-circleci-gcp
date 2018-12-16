@@ -22,7 +22,7 @@ def deploy_app_engine(json_account, project_id, apps, version=None, stop_previou
 def deploy():
     branch = local('git symbolic-ref --short -q HEAD', capture=True)
 
-    source = "/home/circleci/revolico/admin-frontend/build";
+    source = "home/circleci/alejandronunez/createreactapp-circleci-gcp/build";
     local("cp app.yaml %s" % source)
 
     if branch == 'master':
