@@ -21,7 +21,7 @@ jobs:
           - npm-cache-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
 
     # Installing pip requirements
-    - run: ls home
+    - run: ls home/circleci/alejandronunez
     - run: yarn install
 
     # Save cache
@@ -102,7 +102,7 @@ jobs:
     - attach_workspace:
         at: /
 
-    - run: ls home/circleci/alejandronunez/createreactapp-circleci-gcp/
+    - run: ls /home/circleci/alejandronunez/createreactapp-circleci-gcp/
 
     # Start deploy
     - run: apt-get update
