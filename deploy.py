@@ -28,8 +28,8 @@ def deploy():
     if branch == 'master':
         # deploy to production
         with lcd(source):
-            deploy_app_engine('$HOME/gcloud-admin-frontend-service-key.json',
-                              'revolico-admin-frontend',
+            deploy_app_engine('$HOME/gcloud-service-key.json',
+                              'createreactapp-circleci-gcp',
                               ["app.yaml"], 'stable')
 
     else:
@@ -39,6 +39,6 @@ def deploy():
 
             # deploy to production
             with lcd(source):
-                deploy_app_engine('$HOME/gcloud-admin-frontend-service-key.json',
-                                  'revolico-admin-frontend',
+                deploy_app_engine('$HOME/gcloud-service-key.json',
+                                  'rcreatereactapp-circleci-gcp',
                                   ["app.yaml"], 'stable')
