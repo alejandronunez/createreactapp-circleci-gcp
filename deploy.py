@@ -3,12 +3,6 @@ from fabric.api import local, lcd
 def deploy_app_engine(json_account, project_id, apps, version=None, stop_previous=False):
     local("echo '--------Deploy to %s--------'" % project_id)
 
-    # slack notification
-    # local('curl -X POST -H \'Content-type: application/json\' ' +
-    #       '--data \'{"icon_emoji": ":rocket:", "channel": "#dev_notifications", ' +
-    #       '"attachments": [{ "text": "Stating deploy to ' + project_id + ': ' + version + '", "color": "#4183C4"}]}\'' +
-    #       ' $SLACK_HOOK_URL')
-
     # activation account json file way
     local("gcloud auth activate-service-account --key-file %s" % json_account)
 
