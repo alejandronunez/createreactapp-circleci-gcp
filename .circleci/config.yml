@@ -84,6 +84,9 @@ jobs:
     # Run generation of production files
     - run: yarn build
 
+    - store_artifacts:
+        path: build
+
     # Saving build files to deploy
     - persist_to_workspace:
         root: /
