@@ -101,8 +101,6 @@ jobs:
     - attach_workspace:
         at: /
 
-    - run: ls /home/circleci/alejandronunez/createreactapp-circleci-gcp/
-
     # Start deploy
     - run: apt-get update
     - run: apt-get install -y fabric
