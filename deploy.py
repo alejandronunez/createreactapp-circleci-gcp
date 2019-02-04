@@ -1,6 +1,6 @@
 from fabric.api import local, lcd
 
-def deploy_app_engine(json_account, project_id, apps, version=None, stop_previous=False):
+def deploy_app_engine(json_account, project_id, apps, version=None, stop_previous=True):
     local("echo '--------Deploy to %s--------'" % project_id)
 
     # activation account json file way
