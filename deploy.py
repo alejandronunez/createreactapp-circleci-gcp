@@ -24,7 +24,7 @@ def deploy():
         with lcd(source):
             deploy_app_engine('$HOME/gcloud-service-key.json',
                               'createreactapp-circleci-gcp',
-                              ["app.yaml"], 'stable')
+                              ["app.yaml"], 'stage')
 
     else:
         last_comment = local('git log -n 1 --pretty=format:\'%s%n%n%b\'', capture=True)
@@ -35,4 +35,4 @@ def deploy():
             with lcd(source):
                 deploy_app_engine('$HOME/gcloud-service-key.json',
                                   'createreactapp-circleci-gcp',
-                                  ["app.yaml"], 'stable')
+                                  ["app.yaml"], 'stage')
