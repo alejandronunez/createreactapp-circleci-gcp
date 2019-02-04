@@ -1,1 +1,12 @@
-runtime: nodejs8
+runtime: php55
+api_version: 1
+
+handlers:
+# Serve images as static resources.
+- url: /(.+\.(gif|png|jpg|html|js|css))$
+  static_files: \1
+  application_readable: true
+
+# Serve php scripts.
+- url: /(.+\.php)$
+  script: \1
