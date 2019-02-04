@@ -1,7 +1,6 @@
-runtime: nodejs10
+runtime: nodejs8
 
 basic_scaling:
   max_instances: 1
-  idle_timeout: 10m
 
-instance_class: B2
+instance_class: B1

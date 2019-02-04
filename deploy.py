@@ -34,5 +34,5 @@ def deploy():
             # deploy to production
             with lcd(source):
                 deploy_app_engine('$HOME/gcloud-service-key.json',
-                                  'rcreatereactapp-circleci-gcp',
+                                  'createreactapp-circleci-gcp',
                                   ["app.yaml"], 'stable')
