@@ -3,6 +3,8 @@ api_version: 1
 
 handlers:
 # Serve images as static resources.
+- url: /
+  script: index.html
 - url: /(.+\.(gif|png|jpg|html|js|css))$
   static_files: \1
   upload: .+\.(gif|png|jpg|html|js|css)$

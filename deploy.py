@@ -1,6 +1,6 @@
 from fabric.api import local, lcd
 
-def deploy_app_engine(json_account, project_id, apps, version=None, stop_previous=True):
+def deploy_app_engine(json_account, project_id, apps, version=None, stop_previous=False):
     local("echo '--------Deploy to %s--------'" % project_id)
 
     # activation account json file way
@@ -35,4 +35,4 @@ def deploy():
             with lcd(source):
                 deploy_app_engine('$HOME/gcloud-service-key.json',
                                   'createreactapp-circleci-gcp',
-                                  ["app.yaml"])
+                                  ["app.yaml"], 'stable')
