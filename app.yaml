@@ -5,8 +5,8 @@ handlers:
 # Serve images as static resources.
 - url: /(.+\.(gif|png|jpg|html|js|css))$
   static_files: \1
+  upload: .+\.(gif|png|jpg|html|js|css)$
   application_readable: true
-
 # Serve php scripts.
 - url: /(.+\.php)$
   script: \1
