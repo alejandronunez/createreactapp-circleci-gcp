@@ -1,0 +1,14 @@
+.App {
+    text-align: center;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+table{
+    margin: 20px auto;
+}
+table td{
+    padding: 5px 15px;
+}
