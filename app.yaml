@@ -1,7 +1,19 @@
-runtime: nodejs10
+runtime: php55
+api_version: 1
 
-basic_scaling:
-  max_instances: 1
-  idle_timeout: 10m
+#instance_class: B1
+#basic_scaling:
+#  max_instances: 1
+#  idle_timeout: 10m
 
-instance_class: B2
+handlers:
+# Serve images as static resources.
+- url: /
+  script: index.html
+- url: /(.+\.(gif|png|jpg|html|js|css))$
+  static_files: \1
+  upload: .+\.(gif|png|jpg|html|js|css)$
+  application_readable: true
+# Serve php scripts.
+- url: /(.+\.php)$
+  script: \1

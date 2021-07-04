@@ -64,6 +64,7 @@ jobs:
     # Feature Test
     - run: yarn test
 
+
   eslint:
     <<: *build
     steps:
@@ -111,6 +112,7 @@ jobs:
 
     # Deploy script
     - run: fab -f ./deploy.py deploy
+
 
 workflows:
   version: 2
